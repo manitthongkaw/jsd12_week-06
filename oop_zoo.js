@@ -68,7 +68,9 @@ class Zoo {
     console.log(`\n--- Welcome to ${this.zooName} ---`);
     this.animals.forEach((animal) => {
       // Accessing properties and calling methods
-      //   console.log(`Animal: ${animal.name} | Status: ${animal.getStatus()}`);
+      // console.log(`Animal: ${animal.name} | Status: ${animal.getStatus()}`);
+      console.log(Object.getOwnPropertyNames(Object.getPrototypeOf(animal)));
+      console.log(Object.getOwnPropertyNames(animal));
       console.log(`Animal: ${animal.name}`);
       animal.makeSound();
       animal.eat();
